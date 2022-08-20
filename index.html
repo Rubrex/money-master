@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-slate-300">
+    <main class="container mx-auto bg-white my-6 rounded-md">
+      <h2 class="relative text-3xl text-cyan-500 font-bold text-center pt-6">
+        Cost Management
+      </h2>
+      <div class="md:px-16 md:py-6">
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-12 gap-8">
+          <!-- Image container -->
+          <div
+            class="imageSetion md:col-span-7 bg-cover rounded-sm"
+            style="background-image: url(bannerImage.jpeg)"
+          ></div>
+          <!-- accounts container -->
+          <div
+            class="accountSection bg-slate-200 md:col-span-5 text-slate-800 rounded-sm"
+          >
+            <div class="px-8 py-9 text-center">
+              <div>
+                <h2 class="text-lg font-semibold">INCOME</h2>
+                <div class="my-2">
+                  <label for="income" class="text-lg font-semibold"
+                    >Income:
+                  </label>
+                  <input
+                    type="text"
+                    class="bg-slate-300 rounded-md py-1 focus:outline-none focus:ring ring-slate-500 pl-2 font-semibold"
+                    id="income"
+                  />
+                </div>
+              </div>
+              <div>
+                <h2 class="text-lg font-semibold">Expenses</h2>
+                <div class="my-2">
+                  <label for="Food" class="text-lg font-semibold"
+                    >Food :
+                  </label>
+                  <input
+                    type="text"
+                    class="bg-slate-300 rounded-md py-1 focus:outline-none focus:ring ring-slate-500 pl-2 font-semibold"
+                    id="Food"
+                  />
+                </div>
+                <div class="my-2">
+                  <label for="Rent" class="text-lg font-semibold"
+                    >Rent :
+                  </label>
+                  <input
+                    type="text"
+                    class="bg-slate-300 rounded-md py-1 focus:outline-none focus:ring ring-slate-500 pl-2 font-semibold"
+                    id="Rent"
+                  />
+                </div>
+
+                <div class="my-2">
+                  <label for="Clothes" class="text-lg font-semibold"
+                    >Clothes:
+                  </label>
+                  <input
+                    type="text"
+                    class="bg-slate-300 rounded-md py-1 focus:outline-none focus:ring ring-slate-500 pl-2 font-semibold"
+                    id="Clothes"
+                  />
+                </div>
+              </div>
+              <button
+                class="bg-blue-500 text-white px-6 py-2 font-semibold text-lg rounded-md mt-2 hover:ring ring-blue-300"
+                id="calculate"
+              >
+                Calculate
+              </button>
+              <h2 class="text-lg font-semibold my-2">
+                Total Expenses: <span id="totalExpenses">000</span>
+              </h2>
+              <h2 class="text-lg font-semibold my-2">
+                Balance: <span id="balance">000</span>
+              </h2>
+              <!-- Savings Input Area -->
+              <div class="flex justify-evenly items-center my-6">
+                <label for="savings" class="font-bold text-slate-700"
+                  >Save:
+                </label>
+                <input
+                  type="text"
+                  id="savings"
+                  placeholder="Secure your Future"
+                  class="text-center bg-slate-300 rounded-md py-1 focus:outline-none focus:ring ring-slate-500 pl-2 font-semibold"
+                /><span>%</span
+                ><button
+                  class="bg-blue-500 text-white font-semibold text-lg rounded-md hover:ring ring-blue-300 px-4"
+                  id="percentage"
+                >
+                  Save
+                </button>
+              </div>
+              <!-- Total savings & Remaining Balance   -->
+              <h2 class="text-lg font-semibold my-2">
+                Saving Amount: <span id="savingAmount">000</span>
+              </h2>
+              <h2 class="text-lg font-semibold my-2">
+                Remaining Balance: <span id="remainingBalance">000</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/management.js"></script>
+  </body>
+</html>
